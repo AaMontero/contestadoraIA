@@ -1,0 +1,117 @@
+{"intents":[
+    {
+        "tag": "saludo",
+        "patterns": ["hola", "qué tal", "cómo estás", "saludos"],
+        "responses": ["Hola!", "Buenos días!", "¿Cómo estás?"]
+    },
+    {
+        "tag": "nombre",
+        "patterns": ["cómo es tu nombre", "cómo te llamas"],
+        "responses": ["Me llamo Juan Pablo", "Mi nombre es Juan Pablo"]
+    },
+    {
+        "tag": "Saludo Cordial",
+        "patterns": [
+            "Bien, muchas gracias",
+            "Muy bien y usted",
+            "Estoy bien"
+        ],
+        "responses": [
+            "Me alegro que este bien",
+            "Estoy muy contento por usted"
+        ]
+    },
+    {
+        "tag": "gusto",
+        "patterns": [
+            "si con el mismo",
+            "si soy yo",
+            "asdasd"
+        ],
+        "responses": [
+            "asdasd",
+            "asdasda",
+            "asdasd"
+        ]
+    },
+    {
+        "tag": "asdasd",
+        "patterns": [
+            "asdasda",
+            "asdasdasd",
+            "asdasdasd"
+        ],
+        "responses": [
+            "qweewrtrtyer",
+            "rtyutryutyutryu",
+            "rtyuryudghjdgh"
+        ]
+    },
+    {
+        "tag": "WERWFASDFASDFA",
+        "patterns": [
+            "WRTYERTYRGHFSGSG",
+            "QERTQETSDGF",
+            "sghghsfdgd"
+        ],
+        "responses": [
+            "sfdgdfsggsdfg",
+            "sfgsdfgdfg",
+            "sdfgsdfgsdgf"
+        ]
+    },
+    {
+        "tag": "sfgsdfg",
+        "patterns": [
+            "sdfgsdfgsdf",
+            "sdfgdsfg",
+            "afdgdgadfgd"
+        ],
+        "responses": [
+            "afgadgadfg",
+            "afgadfgtrbf",
+            "adfwerasdfawqe"
+        ]
+    },
+    {
+        "tag": "asdfasdfer",
+        "patterns": [
+            "adfasdfasdf",
+            "ADSFSADFSADF",
+            "ASDFSDFSD"
+        ],
+        "responses": [
+            "sdfgsdfgd",
+            "sdfgdsfg",
+            "sdfgsdfg"
+        ]
+    },
+    {
+        "tag": "sdfgfgdfg",
+        "patterns": [
+            "sdfgdsgfsdfg",
+            "dsdfgsdfgsdfg",
+            "dsfgsdfgdf"
+        ],
+        "responses": [
+            "sdfgsdfg",
+            "sdfgdfg",
+            "sfgafgad"
+        ]
+    },
+    {
+        "tag": "sdfgdsfgdf",
+        "patterns": [
+            "sdfgsdfgsdg",
+            "sfdgsdgsdfg",
+            "sdfgdsfgdsf"
+        ],
+        "responses": [
+            "sdfgsdfgsdfgds",
+            "dsfgsdfgdsf",
+            "dsfgsdfgsdfg"
+        ]
+    }
+]
+
+}

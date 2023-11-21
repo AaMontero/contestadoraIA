@@ -1,0 +1,7 @@
+pip install openai 
+pip install --upgrade google-cloud-speech
+pip install --upgrade google-cloud-texttospeech
+python.exe -m pip install --upgrade pip
+pip install numpy
+pip install keras 
+pip install nltk
