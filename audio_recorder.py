@@ -47,7 +47,6 @@ class AudioRecorder:
         stream.stop_stream()
         stream.close()
         self.p.terminate()
-
         wf = wave.open(self.WAVE_OUTPUT_FILENAME, 'wb')
         wf.setnchannels(self.CHANNELS)
         wf.setsampwidth(self.p.get_sample_size(self.FORMAT))
