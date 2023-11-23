@@ -1,16 +1,13 @@
 from google.cloud import texttospeech
 
 class TextToSpeech:
-    def __init__(self, text, output_file_path="audiosMp3/output.mp3"):
-        self.text = text
-        self.output_file_path = output_file_path
+    def __init__(self):
+        self.client = texttospeech.TextToSpeechClient()
 
-    def synthesize_speech(self):
+    def synthesize_speech(self, text, output_file_path="audiosMp3/output.mp3"):
         # Instantiates a client
-        client = texttospeech.TextToSpeechClient()
-
         # Set the text input to be synthesized
-        synthesis_input = texttospeech.SynthesisInput(text=self.text)
+        synthesis_input = texttospeech.SynthesisInput(text=text)
 
         # Build the voice request, select the language code ("es-US") and the ssml
         # voice gender ("male")
@@ -27,15 +24,15 @@ class TextToSpeech:
 
         # Perform the text-to-speech request on the text input with the selected
         # voice parameters and audio file type
-        response = client.synthesize_speech(
+        response = self.client.synthesize_speech(
             input=synthesis_input, voice=voice, audio_config=audio_config
         )
 
         # The response's audio_content is binary.
-        with open(self.output_file_path, "wb") as out:
+        with open(output_file_path, "wb") as out:
             # Write the response to the output file.
             out.write(response.audio_content)
-            print(f'Audio content written to file "{self.output_file_path}"')
+            print(f'Audio content written to file "{output_file_path}"')
 
 
 # Ejemplo de uso

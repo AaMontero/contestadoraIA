@@ -3,15 +3,15 @@ import wave
 import audioop
 
 class AudioRecorder:
-    def __init__(self):
+    def __init__(self, silenceDuration, record_seconds, save_path):
         self.CHUNK = 1024
         self.FORMAT = pyaudio.paInt16
         self.CHANNELS = 1
         self.RATE = 48000
-        self.RECORD_SECONDS = 20
-        self.WAVE_OUTPUT_FILENAME = "grabacion_pyaudio.wav"
+        self.RECORD_SECONDS = record_seconds
+        self.WAVE_OUTPUT_FILENAME = save_path
         self.ENERGY_THRESHOLD = 3500
-        self.SILENCE_DURATION = 4
+        self.SILENCE_DURATION = silenceDuration
 
         self.p = pyaudio.PyAudio()
 
@@ -33,7 +33,7 @@ class AudioRecorder:
             data = stream.read(self.CHUNK)
             frames.append(data)
             energy = audioop.rms(data, 2)
-            print(silence_counter)
+            print(self.WAVE_OUTPUT_FILENAME +" "+ str(silence_counter))
             if energy < self.ENERGY_THRESHOLD:
                 silence_counter += 1
             else:
@@ -53,5 +53,6 @@ class AudioRecorder:
         wf.setframerate(self.RATE)
         wf.writeframes(b''.join(frames))
         wf.close()
-
+        
         print(f"Grabación guardada en '{self.WAVE_OUTPUT_FILENAME}'")
+        return(self.WAVE_OUTPUT_FILENAME)
