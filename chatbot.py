@@ -51,4 +51,10 @@ class ChatBot:
         res = self.get_response(ints)
         print(res)
         return res
-
+def mainBot(): 
+    while True: 
+        entrada = input("Tu: ")
+        chatBot = ChatBot()
+        respuesta = chatBot.chat_loop(entrada)
+        print("Bot: " ,respuesta)
+mainBot()

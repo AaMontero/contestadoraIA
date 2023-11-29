@@ -13,7 +13,7 @@ stemmer = LancasterStemmer()
 
 nltk.download("punkt")
 
-with open ("intents.json", encoding='utf-8') as archivo: 
+with open ("intentsFully.json", encoding='utf-8') as archivo: 
     datos = json.load(archivo)
     
 try:
@@ -67,12 +67,12 @@ red = tflearn.fully_connected(red, 10)
 net = tflearn.fully_connected(red, len(salida[0]), activation="softmax")
 net = tflearn.regression(net)   
 modelo = tflearn.DNN(net)    
-try: 
+'''try: 
     modelo.load("modelo_fully_connected")
-except: 
+except: '''
 
-    modelo.fit(entrenamiento, salida, n_epoch = 1000, batch_size = len(palabras), show_metric = True)
-    modelo.save("modelo_fully_connected")
+modelo.fit(entrenamiento, salida, n_epoch = 1000, batch_size = 10, show_metric = True)
+modelo.save("modelo_fully_connected")
 def mainBot(): 
     while True: 
         entrada = input("Tu: ")
