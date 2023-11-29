@@ -5,6 +5,8 @@ python.exe -m pip install --upgrade pip
 pip install numpy
 pip install keras 
 pip install nltk
+pip install pyaudio 
+pip install pydub
 
 
 choco install ffmpeg

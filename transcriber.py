@@ -24,18 +24,20 @@ class AudioTranscriber:
     
 def conversacion():
     while True:
-        audio_recorder = AudioRecorder(silenceDuration=4, record_seconds=30, save_path="audiosMp3/audio.mp3")
+        audio_recorder = AudioRecorder(silenceDuration=2, record_seconds=30, save_path="audiosMp3/audio.mp3")
         audio = audio_recorder.record_audio()
         transcriber = AudioTranscriber()
         transcripcion = transcriber.transcribe_audio(audio_file_path=audio)
-        #chatBot = ChatBot()
-        #respuesta = chatBot.chat_loop(transcripcion)
+        print("Trans: " + transcripcion)
+        chatBot = ChatBot()
+        respuesta = chatBot.chat_loop(transcripcion)
         respuesta = chatGPTIA.obtener_respuesta(transcripcion)
+        respuesta = respuesta.encode('latin-1').decode('utf-8')
+        print("RespuestaBot:" + respuesta)
         recorder.synthesize_speech(respuesta, output_file_path="audiosMp3/output.mp3")
         speacker.reproducir_audio("audiosMp3/output.mp3")
         if False:
             break
-        return transcripcion
 if __name__ == "__main__":
     transcriber = AudioTranscriber()
     api_key = "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" 
@@ -43,7 +45,7 @@ if __name__ == "__main__":
     recorder = TextToSpeech() 
     speacker = Reproductor()
     nombre = "Anthonny Montero"
-    script_inicial = f'Buenos días tengo el gusto con {nombre}, le saludamos de Manufacturera Ecuatoriana "Primero Ecuador"'
+    script_inicial = f'Buenos días le saludamos de Manufacturera Ecuatoriana "Primero Ecuador",  tengo el gusto con {nombre},'
     recorder.synthesize_speech(script_inicial, output_file_path="saludoInicial.mp3")
     speacker.reproducir_audio("saludoInicial.mp3")
     respuestaAnterior = conversacion(); 
