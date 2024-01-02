@@ -7,7 +7,7 @@ import tflearn
 import tensorflow as tf
 from tensorflow.python.util.nest import is_sequence_or_composite
 import nltk
-from nltk.stem import WordNetLemmatizer #Para pasar las palabras a su forma raíz
+from nltk.stem import WordNetLemmatizer #Para pasar las palabr,,as a su forma raíz
 from nltk.stem.lancaster import LancasterStemmer
 stemmer = LancasterStemmer() 
 
@@ -20,13 +20,10 @@ try:
     with open ("variables.pickle", "rb") as archivoPickel: 
         palabras, tags, entrenamiento, salida = archivoPickel.load(archivoPickel)
 except: 
-
-    
     palabras = []
     tags = []
     auxX = []
     auxY =[]
-
     for contenido in datos["intents"]: 
         for patrones in contenido["patterns"]: 
             auxPalabra = nltk.word_tokenize(patrones)

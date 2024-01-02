@@ -4,6 +4,7 @@ from chatbot import ChatBot
 from textoAVoz import TextToSpeech
 from test_openai import claseOpenAI 
 from reproductor import Reproductor
+import numpy as np 
 class AudioTranscriber:
     def __init__(self):
         self.client = speech.SpeechClient()
@@ -20,23 +21,34 @@ class AudioTranscriber:
         response = client.recognize(config=config, audio=audio)
         for result in response.results:
             print(f"Transcript: {result.alternatives[0].transcript}")
+        if not response.results: 
+            return ""; 
         return response.results[0].alternatives[0].transcript
     
-def conversacion():
+def conversacion(chatBot):
     while True:
         audio_recorder = AudioRecorder(silenceDuration=2, record_seconds=30, save_path="audiosMp3/audio.mp3")
+        #Creación de un sistema de prioridades
+        confirmoIdentidad = ofrecioPromocion = esSoltero = esCasado = DireccionHorarios = agendoCita = DocumentosN = False 
         audio = audio_recorder.record_audio()
         transcriber = AudioTranscriber()
         transcripcion = transcriber.transcribe_audio(audio_file_path=audio)
         print("Trans: " + transcripcion)
-        chatBot = ChatBot()
-        respuesta = chatBot.chat_loop(transcripcion)
-        respuesta = chatGPTIA.obtener_respuesta(transcripcion)
-        respuesta = respuesta.encode('latin-1').decode('utf-8')
-        print("RespuestaBot:" + respuesta)
+        if(transcripcion == ""): 
+            respuesta = "Me podría repetir lo último que me dijo, no le logro escuchar"
+        else:
+            respuesta, resVal1 = chatBot.chat_loop(transcripcion)
+            #Establecer un margen de respuesta
+            valoresOrdenados = sorted(resVal1, reverse=True)
+            print ("Los resultados en el metodo principal son: ",valoresOrdenados)
+            if(valoresOrdenados[0]- valoresOrdenados[1] > 0.4):
+                print("La desviación es menor al margen")
+            #respuesta = chatGPTIA.obtener_respuesta(transcripcion)
+            respuesta = respuesta.encode('latin-1').decode('utf-8')
+            print("RespuestaBot:" + respuesta)
         recorder.synthesize_speech(respuesta, output_file_path="audiosMp3/output.mp3")
         speacker.reproducir_audio("audiosMp3/output.mp3")
-        if False:
+        if(respuesta == "Muy amable, hasta luego"):
             break
 if __name__ == "__main__":
     transcriber = AudioTranscriber()
@@ -48,5 +60,5 @@ if __name__ == "__main__":
     script_inicial = f'Buenos días le saludamos de Manufacturera Ecuatoriana "Primero Ecuador",  tengo el gusto con {nombre},'
     recorder.synthesize_speech(script_inicial, output_file_path="saludoInicial.mp3")
     speacker.reproducir_audio("saludoInicial.mp3")
-    respuestaAnterior = conversacion(); 
-
+    chatBot = ChatBot()
+    respuestaAnterior = conversacion(chatBot); 

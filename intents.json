@@ -13,10 +13,16 @@
                 "Sí, buenas tardes, está hablando con la misma persona",
                 "Sí, buenos días, habla con la misma persona",
                 "Sí, ¿en qué puedo ayudarle?",
-                "Sí, ¿en qué puedo ser de ayuda?"
+                "Sí, ¿en qué puedo ser de ayuda?",
+                "¿Como puedo ayudarle?",
+                "Si, que necesita? ",
+                "Buenas tardes, en que le ayudo",
+                "Si, Buenos días, en que le ayudo", 
+                "Si, buenos días",
+                "Si, buenas tardes"
             ],
             "responses": [
-                "Encax|ntado de comunicarme con usted, le llamo para comunicarle que ha sido acreedor de una tarjeta gitfcard de consumo para usted y su familia",
+                "Encantado de comunicarme con usted, le llamo para comunicarle que ha sido acreedor de una tarjeta gift card de consumo para usted y su familia",
                 "Como esta? Me comunico con usted porque ha sido acreedor a una tarjeta giftcard de consumo para usted y su familia"
             ]
         },
@@ -43,15 +49,15 @@
         {
             "tag": "noSeEncuentra",
             "patterns": [
-                "No se encuentra",
-                "No está",
+                "No se encuentra ahora",
+                "No está en este momento",
                 "En este momento no se encuentra",
                 "No se halla",
                 "Actualmente no está",
                 "En este instante no se encuentra",
                 "No está disponible en este momento",
-                "No presente",
-                "Está ausente"
+                "No esta presente",
+                "No se encuentra, está ausente"
             ],
             "responses": [
                 "Disculpe, ¿A que hora le podría localizar?",
@@ -64,47 +70,145 @@
                 "Por que me gane esa tarjeta",
                 "Cuál es la razón por la que tengo la tarjeta",
                 "Por que tengo ese regalo",
-                "regalo",
-                "obsequio"
+                "Podría explicarme porque tengo esa tarjeta",
+                "Cual es la razon de tener la tarjeta",
+                "Por que me están dando la giftcard",
+                "Podría darme mas detalles de porque gane la tarjeta",
+                "Por que razón tengo la tarjeta"
             ],
             "responses": [
                 "Ha sido ganador de este premio por los consumos que ha realizado con sus tarjetas de credito: Visa, Mastercard, America Express, Dinners, Discovery"
             ]
         },
         {
-            "tag": "queEsGIftCard",
+            "tag": "queEsGiftCard",
             "patterns": [
-                "Que es una giftCard",
-                "Por que tengo la gitfcard",
-                "Por que me gane la tarjeta de regalo",
+                "Que es una gift card",
+                "Qué es una tarjeta de regalo",
+                "Me puede decir que es la gift card",
                 "Que es una tarjeta de regalo"
-
             ],
             "responses": [
                 "La giftcard es una tarjeta de regalo que se encuentra precargada para que usted pueda realizar compras"
             ]
         },
         {
-            "tag": "", 
-            "patterns":[],
-            "responses":[]
-        },{
-            "tag":"",
-            "patterns":[], 
-            "responses":[] 
-        },{
-            "tag":"", 
-            "patterns":[],
-            "responses":[]
-        }, 
+            "tag": "CostosGiftcard",
+            "patterns": [
+                "La gift card tiene algun costo",
+                "¿Hay opciones de recarga para la gift card?",
+                "¿Cuál es el precio de la gift card?",
+                "¿Hay cargos adicionales para la tarjeta de regalo?",
+                "tiene algún costo asociado"
+            ],
+            "responses": [
+                "No, la gift card no tiene costos, ni presenta cargos adicionales"
+            ]
+        },
+        {
+            "tag": "activacionGift",
+            "patterns": [
+                "¿Cuál es el proceso de activación de la gift card?",
+                "¿Cómo activo mi gift card?",
+                "¿Que tengo que hacer para activar la tarjeta?",
+                "Cual es el proceso para activar la gift Card",
+                "Cual es el proceso para activar la tarjeta",
+                "¿Es necesario activar la gift card?",
+                "¿Cómo puedo recargar la gift card?"
+            ],
+            "responses": [
+                "La gift card se activa automáticamente en el momento de la entrega. Puede comenzar a usarla de inmediato."
+            ]
+        },
+        {
+            "tag": "utilizarTarjeta",
+            "patterns": [
+                "Que tengo que hacer para acceder", 
+                "Que tengo que hacer para acceder al beneficio",
+                "Que tengo que hacer para tener la tarjeta", 
+                "Que tengo que hacer para adquirir el beneficio", 
+                "Que hay que hacer para acceder al beneficio", 
+                "cómo puedo utilizar la tarjeta",
+                "Como puedo acceder a este beneficio",
+                "Podria darme más detalles",
+                "Que tengo que hacer para acceder a este beneficio",
+                "Me podria dar mas informacion sobre la tarjeta giftcard",
+                "Me podría dar mas detalles sobre la tarjeta giftcard"
+            ],
+            "responses": [
+                "Para acceder a este beneficio tiene que acercarse a nuestra oficina, con su cedula de identidad"
+            ]
+        },
+        {
+            "tag": "direccion y horarios",
+            "patterns": [
+                "Ayudeme con la dirección de la oficina y los horarios de atención",
+                "A que hora y en donde puedo retirar",
+                "a que hora y a donde me tengo que acercar",
+                "En donde y a que hora puedo estar allá",
+                "En donde se encuentra su oficina", 
+                "Donde es la oficina",
+                "A donde me tengo que acercar"
+                
+            ],
+            "responses": [
+                "Estamos ubicados en el edificio Urban Plaza, entre Colon y 12 de Octubre, se puede acercar de 2 a 7 de la tarde, en que horario le podría agendar?"
+            ]
+        },
+        {
+            "tag": "ocupadoDia",
+            "patterns": [
+                "Me encuentro ocupado",
+                "No puedo acercarme en ese horario",
+                "Estoy ocupado, no puedo a esa hora",
+                "Cuanto dura la promocion"
+            ],
+            "responses": [
+                "Se puede aplicar a la promoción durante todo el mes actual"
+            ]
+        },
+        {
+            "tag": "plazoTarjetaGift",
+            "patterns": [
+                "Cual es el plazo que tengo que retirar la tarjeta",
+                "Hasta cuando me puedo acercar",
+                "hasta cuando esta esta promocion",
+                "Cuanto dura la promocion"
+            ],
+            "responses": [
+                "Se puede aplicar a la promoción durante todo el mes actual"
+            ]
+        },
+        {
+            "tag": "documento adicional",
+            "patterns": [
+                "unicamente tengo que llevar mi cedula",
+                "tengo que llevar algun otro documento",
+                "Tengo que llevar mi tarjeta de credito",
+                "Necesito algun otro documento", 
+                "Solo tengo que llevar la cedula", 
+                "Solo tengo que llevar la cedula de identidad", 
+                "Solo con la cedula", 
+                "Solo necesito la cedula de identidad", 
+                "Tengo que llevar otro papel"    
+            ],
+            "responses": [
+                "En caso de contar con una tarjeta participante podría traerla, no existe la necesidad de darn su información solo verificar que posee el documento"
+            ]
+        },
         {
             "tag": "direccionRepetir",
             "patterns": [
                 "Me podría repetir la dirección",
                 "Repitame la dirección",
                 "Donde estan ubicados",
+                "Donde esta ubicado", 
+                "Donde tengo que ir a retirar", 
                 "A donde me puedo acercar",
                 "Me puede repetir la dirección",
+                "En donde se encuentra su oficina", 
+                "Donde es la oficina",
+                "A donde me tengo que acercar",
                 "dirección",
                 "direcciones",
                 "ubicación",
@@ -134,11 +238,69 @@
             "patterns": [
                 "En que horario me puedo acercar",
                 "A que hora puedo estar por ahi",
-                "A que hora me dijo"
+                "A que hora me dijo", 
+                "En que horario tendría que ir", 
+                "A que hora tendría que ir"
             ],
             "responses": [
-                "Se puede acercar entre las 2 y las 6 de la tarde",
-                "Se puede acercar a partir de las 2 de la tarde, hasta las 6"
+                "Se puede acercar entre las 2 y las 6 de la tarde, en que horario le puedo agendar?",
+                "Se puede acercar a partir de las 2 de la tarde, hasta las 6, en que horario le puedo agendar?"
+            ]
+        },
+        {
+            "tag": "beneficiosFamilia",
+            "patterns": [
+                "Cuales son los beneficios adicionales al llevar a mi familia",
+                "Podría explicarme más sobre los beneficios específicos al ir acompañado de mi familia",
+                "Los beneficios son mayores si asisto con mi familia"
+            ],
+            "responses": [
+                "Tambien le podemos registrar una tarjeta de regalo a su pareja "
+            ]
+        },
+        {
+            "tag": "estadoCivilCasado",
+            "patterns": [
+                "Estoy casado",
+                "Actualmente tengo un compromiso",
+                "Tengo pareja",
+                "Estoy unido con mi pareja",
+                "No estoy casado pero tengo una relación",
+                "Estoy casado y tengo mis hijos"
+            ],
+            "responses": [
+                "Si desea puede acercarse junto con su familia, esto le haría acreedor a una mayor cantidad de beneficios"
+            ]
+        },
+        {
+            "tag": "estadoCivilSoltero",
+            "patterns": [
+                "Estoy soltero",
+                "Actualmente no tengo un compromiso",
+                "No tengo pareja",
+                "No tengo pareja",
+                "No estoy en una relacion",
+                "No estoy casado"
+            ],
+            "responses": [
+                "Le informo que si se acerca a nuestras oficinas con sus familiares usted accede a un mayor numero de beneficios"
+            ]
+        },
+        {
+            "tag": "Despedida",
+            "patterns": [
+                "Gracias por la informacion, hasta luego",
+                "Adiós, tenga un buen día",
+                "Ok,muy amable hasta luego",
+                "Gracias, eso es todo",
+                "Hasta luego",
+                "Muy amable, hasta luego "
+            ],
+            "responses": [
+                "Ha sido un placer hablar con usted",
+                "Un excelente día mi estimado",
+                "Muchas Gracias",
+                "Hasta luego"
             ]
         }
     ]
