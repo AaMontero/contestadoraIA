@@ -1,0 +1,145 @@
+{
+    "intents": [
+        {
+            "tag": "confirmaIdentidad",
+            "patterns": [
+                "Si, con el mismo",
+                "Si el habla",
+                "Si ella habla",
+                "Si, Buenas tardes con el mismo",
+                "Si, Buenos dias con el mismo",
+                "Si en que le puedo ayudar",
+                "Sí, es la misma persona",
+                "Sí, buenas tardes, está hablando con la misma persona",
+                "Sí, buenos días, habla con la misma persona",
+                "Sí, ¿en qué puedo ayudarle?",
+                "Sí, ¿en qué puedo ser de ayuda?"
+            ],
+            "responses": [
+                "Encax|ntado de comunicarme con usted, le llamo para comunicarle que ha sido acreedor de una tarjeta gitfcard de consumo para usted y su familia",
+                "Como esta? Me comunico con usted porque ha sido acreedor a una tarjeta giftcard de consumo para usted y su familia"
+            ]
+        },
+        {
+            "tag": "negacionIdentidad",
+            "patterns": [
+                "No esta equivocado",
+                "No, el no vive aqui",
+                "No, este no es el numero",
+                "No, está incorrecto",
+                "No, él no reside aquí",
+                "No, este no es el número",
+                "No, él no habita aquí",
+                "Correcto, no vive aquí",
+                "No, este no es su número",
+                "No, hay una confusión",
+                "No, el número no es este"
+            ],
+            "responses": [
+                "Disculpe, hasta luego",
+                "Muchas gracias, tenga un buen día"
+            ]
+        },
+        {
+            "tag": "noSeEncuentra",
+            "patterns": [
+                "No se encuentra",
+                "No está",
+                "En este momento no se encuentra",
+                "No se halla",
+                "Actualmente no está",
+                "En este instante no se encuentra",
+                "No está disponible en este momento",
+                "No presente",
+                "Está ausente"
+            ],
+            "responses": [
+                "Disculpe, ¿A que hora le podría localizar?",
+                "Disculpe, ¿en que horario le puedo contactar?"
+            ]
+        },
+        {
+            "tag": "razonesGiftCard",
+            "patterns": [
+                "Por que me gane esa tarjeta",
+                "Cuál es la razón por la que tengo la tarjeta",
+                "Por que tengo ese regalo",
+                "regalo",
+                "obsequio"
+            ],
+            "responses": [
+                "Ha sido ganador de este premio por los consumos que ha realizado con sus tarjetas de credito: Visa, Mastercard, America Express, Dinners, Discovery"
+            ]
+        },
+        {
+            "tag": "queEsGIftCard",
+            "patterns": [
+                "Que es una giftCard",
+                "Por que tengo la gitfcard",
+                "Por que me gane la tarjeta de regalo",
+                "Que es una tarjeta de regalo"
+
+            ],
+            "responses": [
+                "La giftcard es una tarjeta de regalo que se encuentra precargada para que usted pueda realizar compras"
+            ]
+        },
+        {
+            "tag": "", 
+            "patterns":[],
+            "responses":[]
+        },{
+            "tag":"",
+            "patterns":[], 
+            "responses":[] 
+        },{
+            "tag":"", 
+            "patterns":[],
+            "responses":[]
+        }, 
+        {
+            "tag": "direccionRepetir",
+            "patterns": [
+                "Me podría repetir la dirección",
+                "Repitame la dirección",
+                "Donde estan ubicados",
+                "A donde me puedo acercar",
+                "Me puede repetir la dirección",
+                "dirección",
+                "direcciones",
+                "ubicación",
+                "ubicaciones",
+                "localización",
+                "localizaciones",
+                "sitio",
+                "sitios",
+                "lugar",
+                "lugares",
+                "domicilio",
+                "domicilios",
+                "posición",
+                "posiciones",
+                "En que piso me dijo",
+                "En cual piso",
+                "piso",
+                "pisos"
+            ],
+            "responses": [
+                "Estamos ubicados en la Colón y 12 de Octubre, Edificio Urban Plaza, en el piso once",
+                "La dirección es Colón y 12 de Octubre, Edificio Urban Plaza, piso once"
+            ]
+        },
+        {
+            "tag": "HorarioAgencia",
+            "patterns": [
+                "En que horario me puedo acercar",
+                "A que hora puedo estar por ahi",
+                "A que hora me dijo"
+            ],
+            "responses": [
+                "Se puede acercar entre las 2 y las 6 de la tarde",
+                "Se puede acercar a partir de las 2 de la tarde, hasta las 6"
+            ]
+        }
+    ]
+}

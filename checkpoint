@@ -1,2 +1,2 @@
-model_checkpoint_path: "C:\\Users\\DESARROLLADOR1\\Documents\\PorjectoOpenAI3.9\\projectoChatBot\\modelo_fully_connected"
-all_model_checkpoint_paths: "C:\\Users\\DESARROLLADOR1\\Documents\\PorjectoOpenAI3.9\\projectoChatBot\\modelo_fully_connected"
+model_checkpoint_path: "C:\\Users\\DESARROLLO2\\Documents\\Entorno3.10\\Proyectochatbot\\contestadoraIA\\modelo_fully_connected"
+all_model_checkpoint_paths: "C:\\Users\\DESARROLLO2\\Documents\\Entorno3.10\\Proyectochatbot\\contestadoraIA\\modelo_fully_connected"
